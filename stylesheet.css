@@ -1,0 +1,256 @@
+*{ /*selector bintang (*) untuk menerapkan CSS ke semua element*/
+    box-sizing: border-box;
+    /*Dengan mengatur property box-sizing ke border-box,
+    width sebuah element akan menyertakan padding dan border.
+    Karena itu, layout tidak akan pecah ketika Anda menambahkan padding atau border
+    (berbeda halnya dengan margin)*/
+}
+
+body{ /*untuk keseluruhan di tag body*/
+    margin: 0; /*membuat ruang menjadi penuh tanpa sisi*/
+    font-family: "Footlight MT Light"; /*menetapkan jenis font diseluruh tag body*/
+}
+
+a { /*untuk keseluruhan di tag a*/
+    text-decoration: none; /*menghilangkan garis bawah pada tombol link*/
+}
+
+.container{ /*untuk keseluruhan*/
+    width: 100%; /*mengatur lebar kelas container*/
+    /*Karena kita menetapkan width dari container menjadi 100%, maka bagian lesson akan menjadi terlalu luas
+    untuk layar yang sangat besar. Kita dapat memperbaikinya dengan menetapkan max-width.
+    Seperti contoh dibawah, kita telah menetapkan max-width ke 1170px, sehingga konten didalamnya
+    akan selalu berada dalam batasan ini*/
+    max-width: 1170px; /*membatasi lebar maksimum container ke 1170px*/
+    padding-left: 15px; /*mengatur ruang dalam bagian kiri*/
+    padding-right: 15px; /*mengatur ruang dalam bagian kanan*/
+    /*dibawah ini adalah mengatur posisi container ke tengah*/
+    margin-left: auto; /*mengatur ruang luar bagian kiri menjadi otomatis*/
+    margin-right: auto; /*mengatur ruang luar bagian kanan menjadi otomatis*/
+}
+
+header{
+    height: 65px; /*mengatur tinggi header*/
+    width: 100%; /*mengatur lebar header*/
+    background-color: rgba(34, 49, 52, 0.9);
+    /*diatas cara mengatur warna background header menggunakan rgba termasuk transparansi nya*/
+    /*rgba hanya latar belakang yang transparan, sedangkan opacity seluruh element
+    menjadi transparan termasuk semua yang didalamnya*/
+    position: fixed; /*menahan posisi header ketika di scroll ke bawah*/
+    top: 0; /*mengatur posisi header yang akan ditahan*/
+    z-index: 10; /*mengubah urutan tumpukan element.
+    Element dengan z-index lebih besar akan ditampilkan di bagian atas.
+    Perlu diingat bahwa z-index hanya akan berlaku bila digabungkan dengan property position.*/
+}
+
+.header-left{
+    float: left; /*mensejajarkan posisi logo dan login*/
+}
+
+.menu-icon {
+    color: white; /*memberi warna putih*/
+    float: right; /*mengatur posisi ke kanan*/
+    font-size: 25px;
+    padding: 21px 0;
+    display: none; /*tampilan disembunyikan*/
+}
+
+.header-right{
+    float: right; /*mensejajarkan posisi login ke kanan*/
+    margin-right: -25px;
+    /*dibawah ini adalah codingan untuk Login saja*/
+    /*float: right; /*mensejajarkan posisi login ke kanan*/
+    /*background-color: rgba(255, 255, 255, 0.3); /*mengatur warna background*/
+    /*transition: all 0.5s; /*menambahkan animasi transisi pada tombol*/
+}
+
+.header-right a{
+    /*dibawah ini adalah codingan untuk Login saja*/
+    /*line-height: 65px; /*menengahkan teks secara vertikal*/
+    /*padding-left: 25px; /*mengatur ruang dalam bagian kiri*/
+    /*padding-right: 25px; /*mengatur ruang dalam bagian kanan*/
+    /*color: white; /*mengubah warna font pada teks*/
+    /*display: block; /*mengatur tombol agar kliknya dari seluruh ruang tombol, bukan hanya di teks nya saja*/
+    line-height: 65px; /*menengahkan teks secara vertikal*/
+    padding-left: 25px; /*mengatur ruang dalam bagian kiri*/
+    padding-right: 25px; /*mengatur ruang dalam bagian kanan*/
+    color: white; /*mengubah warna font pada teks*/
+    display: block; /*mengatur tombol agar kliknya dari seluruh ruang tombol, bukan hanya di teks nya saja*/
+    float: left;
+    transition: all 0.5s;
+}
+
+/*dibawah ini adalah codingan untuk Login saja*/
+/*.header-right:hover{
+    background-color: rgba(255, 255, 255, 0.5);} /*mengubah warna tombol ketika ditunjuk kursor
+    dengan menambah kontras sedikit*/
+
+.header-right a:hover{
+    background-color: rgba(255, 255, 255, 0.3); /*mengubah warna tombol ketika ditunjuk kursor
+    dengan menambah kontras sedikit*/
+}
+
+.logo{
+    width: 124px; /*mengatur lebar logo*/
+    margin-top: 20px; /*mengatur ruang luar bagian atas header*/
+}
+
+.top-wrapper{
+    padding-top: 180px; /*mengatur ruang dalam bagian atas*/
+    padding-bottom: 100px; /*mengatur ruang dalam bagian bawah*/
+    color:white; /*mengatur warna font*/
+    background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
+    /*diatas adalah cara menyisipkan gambar background menggunakan url*/
+    background-size: cover; /*membuat tampilan gambar background menjadi penuh atau satu tampilan*/
+    text-align: center; /*mengatur posisi teks dan element inline tag a ke tengah*/
+}
+
+/*margin 0 auto memposisi-tengahkan element div atau block,
+sedangkan text align center memposisi-tengahkan tag a dan span atau element inline*/
+
+.top-wrapper h1 {
+    opacity:0.7; /*mengatur tingkat kecerahan atau transparansi*/
+    font-size:45px; /*mengatur ukuran font*/
+    letter-spacing:5px; /*mengatur jarak antar huruf*/
+    margin-bottom:10px; /*mengatur ruang luar bagian bawah*/
+}
+
+.top-wrapper p {
+    opacity:0.7; /*mengatur tingkat kecerahan atau transparansi*/
+    margin-bottom:3px; /*mengatur ruang luar bagian bawah*/
+}
+
+.btn-wrapper{
+    margin-top: 20px; /*mengatur ruang luar bagian atas*/
+    margin-bottom: 20px; /*mengatur ruang luar bagian bawah*/
+}
+
+.btn-wrapper p{
+    margin-top: 10px; /*mengatur ruang luar bagian atas*/
+    margin-bottom: 10px; /*mengatur ruang luar bagian bawah*/
+}
+
+.btn { /*mengatur bagian tombol*/
+    padding: 12px 24px; /*mengatur ruang dalam bagian atas-bawah 12px dan kanan-kiri 24px*/
+    color: white; /*mengatur warna font*/
+    display: inline-block; /*mensejajarkan posisi tombol ke horizontal atau mendatar
+    dan membuat tombol menjadi besar*/
+    opacity: 1; /*mengatur transparansi*/
+    border-radius: 4px; /*mengatur sudut tombol menjadi bulat*/
+}
+
+.btn:hover{ /*mengubah warna tombol ketika ditunjuk kursor*/
+    opacity: 1; 
+}
+
+/*dibawah ini adalah mengatur warna tombol masing-masing */
+.signup{
+    background-color: #239b76;
+}
+
+.facebook{
+    background-color: #3b5998;
+    margin-right:10px; /*mengatur ruang luar bagian kanan agar tidak terlalu rapat*/
+}
+
+.twitter{
+    background-color: #55acee;
+}
+
+.fa{
+    margin-right: 5px; /*mengatur posisi ikon*/
+}
+
+.lesson-wrapper{
+    padding-bottom: 80px; /*mengatur ruang dalam bagian bawah*/
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: #f7f7f7; /*mengatur warna background layout*/
+    text-align: center; /*mensejajarkan semua teks dan gambar ke tengah*/
+}
+
+.heading{
+    padding-top: 60px; /*mengatur ruang dalam bagian atas*/
+    padding-bottom: 30px; /*mengatur ruang dalam bagian bawah*/
+    color: #5f5d60; /*mengatur warna font*/
+}
+
+.heading h2{
+    font-weight: normal; /*mengubah ketebalan teks menjadi normal,
+    pada tag h1-h6 ketebalan default nya adalah bold*/ 
+}
+
+.lesson{
+    float: left; /*mensejajarkan ikon secara mendatar atau horizontal*/
+    width: 25%; /*mengatur lebar ikon secara persen*/
+}
+
+.lesson-icon{
+    position: relative; /*position relative yaitu menentukan titik referensi (panduan) pada element
+    yang akan digunakan sebagai titik referensi position absolute*/
+}
+
+.lesson-icon p{
+    position: absolute; /*membuat element menindihkan di atas element lain
+    yang menentukan posisinya menggunakan properti top dan left*/
+    top: 90px; /*mengatur posisi position absolute*/
+    width: 100%; /*mengatur lebar text*/
+    color: white; /*mengubah warna font*/
+}
+
+.txt-contents{
+    width: 80%; /*mengatur lebar text*/
+    display: inline-block; /*mensejajarkan posisi element ke horizontal atau mendatar
+    dan membuat element menjadi besar*/
+    margin-top: 20px; /*mengatur ruang luar bagian atas*/
+    font-size: 15px; /*mengatur ukuran font*/
+    color: #b3aeb5; /*mengatur warna font*/
+}
+
+.clear{
+    clear: left; /*untuk membatalkan property float milik element turunan,
+    sehingga height-nya akan kembali mempengaruhi height element induk*/
+}
+
+.message-wrapper{
+    border-bottom: 1px solid #eee; /*membuat garis atau batas dibawah dan menambah ketebalan garis*/
+    padding-bottom: 80px; /*mengatur ruang dalam bagian bawah*/
+    text-align: center; /*mengatur element ke posisi tengah*/
+}
+
+.heading h3{
+    font-weight: normal; /*mengubah ketebalan teks menjadi normal,
+    pada tag h1-h6 ketebalan default nya adalah bold*/ 
+}
+
+.message{
+    background-color: #5dca88; /*mengatur warna background tombol*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
+    cursor: pointer; /*mengubah kursor menjadi pointer(klik jari)*/
+    box-shadow: 0px 7px #1a7940; /*membuat bayangan pada tombol atau 3D*/
+    /*horizontal, vertikal, warna*/
+}
+
+.message:active{
+    box-shadow: none; /*menghilangkan bayangan saat tombol diklik
+    dan membuat tombol terlihat seperti sedang ditekan*/
+    position: relative; /*menurunkan posisi tombol sesuai panjang bayangan
+    dan membuat tombol terlihat seperti telah ditekan*/
+    top: 7px;
+}
+
+footer{
+    padding-top: 30px; /*mengatur ruang dalam bagian atas*/
+}
+
+footer img{
+    width: 125px; /*mengatur lebar logo footer*/
+}
+
+footer p{
+    color: #b3aeb5; /*mengatur warna font teks di footer*/
+    font-size: 12px; /*mengatur ukuran font teks di footer*/
+}
