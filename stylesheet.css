@@ -52,7 +52,7 @@ header{
     float: right; /*mengatur posisi ke kanan*/
     font-size: 25px;
     padding: 21px 0;
-    display: none; !important /*tampilan disembunyikan*/
+    display: none !important; /*tampilan disembunyikan*/
     /*important berfungsi untuk mengaktifkan properti yang ada di selector jika properti tersebut tidak aktif*/
 }
 
