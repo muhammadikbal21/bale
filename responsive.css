@@ -1,0 +1,60 @@
+/*Jika max-width: 1000px dipilih, CSS akan diterapkan untuk layar yang berukuran 1000px kebawah.
+Sebaliknya, untuk min-width: 500px, CSS akan diterapkan hanya untuk ukuran layar 500px keatas*/
+
+/*Kita akan menggunakan 1000px sebagai breakpoint untuk tampilan ke tablet*/
+@media (max-width:1000px){
+    .top-wrapper h1{
+        font-size: 32px; /*mengatur ukuran font*/
+    }
+
+    .lesson{ /*mengatur ukuran icon di tablet*/
+        width:50%;
+        margin-bottom:50px;
+    }
+
+    .heading{
+        font-size: 20px; /*mengatur ukuran font*/
+    }
+}
+
+/*Kita akan menggunakan 670px sebagai breakpoint untuk tampilan ke smartphone*/
+@media (max-width:670px){ 
+    .top-wrapper{
+        text-align: left; /*mengatur posisi teks ke sebelah kiri*/
+        padding-top: 130px; /*mengatur ruang dalam bagian atas*/
+    }
+
+    .top-wrapper h1{
+        font-size: 24px; /*mengatur ukuran font*/
+        line-height: 36px; /*menengahkan teks secara vertikal*/
+    }
+
+    .top-wrapper p{
+        font-size: 14px; /*mengatur ukuran font*/
+        line-height: 20px; /*menengahkan teks secara vertikal*/
+    }
+    
+    .menu-icon {
+       display: block;/*menampilkan ikon menu*/     
+    }
+
+    .header-right{
+        display: none; /*menyembunyikan menu di smartphone*/
+    }
+
+    .btn{
+        width: 100%; /*mengatur lebar tombol*/
+    }
+    
+    .facebook{
+        margin-bottom: 10px; /*mengatur ruang luar bagian bawah*/
+    }
+
+    .lesson{ /*mengatur ukuran icon di smartphone*/
+        width: 100%; 
+    }
+
+    footer{
+        text-align: center; /*mensejajarkan footer ke tengah pada tampilan di smartphone*/
+    }
+}
