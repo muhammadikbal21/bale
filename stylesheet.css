@@ -193,7 +193,7 @@ sedangkan text align center memposisi-tengahkan tag a dan span atau element inli
 .lesson-icon p{
     position: absolute; /*membuat element menindihkan di atas element lain
     yang menentukan posisinya menggunakan properti top dan left*/
-    top: 90px; /*mengatur posisi position absolute*/
+    top: 80px; /*mengatur posisi position absolute*/
     width: 100%; /*mengatur lebar text*/
     color: white; /*mengubah warna font*/
 }
